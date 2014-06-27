@@ -1,0 +1,106 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/mountains.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 8em;
+    font-family: 'Lato';
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.container{
+    width: 100%;
+    float: left;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    color: white;
+}
+
+div{
+    padding: 0px;
+    margin: 0px;
+}
+
+form{
+    display: inline;
+}
+
+button {
+    position: relative;
+    transition: .5s all;
+    border-radius: 10px;
+    background-color: rgba(58, 83, 155, .5);/*#162f39*/
+    border-color: rgba(58, 83, 155, .5);/*#162f39*/
+    color: white;
+    width: 150px;
+    height: 75px;
+    top: 200px;
+    font-size: 2em;
+    font-family: 'Lato';
+    margin-left: 15px;
+    margin-right: 15px;
+}
+button:hover {
+    box-shadow: 0px 0px 3px white;
+    background-color: rgba(58, 83, 155, 0.8);
+}
+
+.title-bar{
+    position: relative;
+    background:rgba(255, 255, 255, 0.4);
+    font-family: 'Lato';
+    color: white;
+}
+
+h1{
+    padding: 15px;
+    text-align: center;
+}
+
+.hidden{
+    width: 100%;    
+    position: absolute;
+    top: 90%;
+/*    bottom: -75px;*/
+}
+
+img{
+    padding: 30px;
+}
+
+.box{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    font-family: 'Lato';
+    color: white;
+    display: block; 
+    padding: 0px;
+    margin-top: -16px;
+}
+
+#airjam{
+    background: #F39C12;
+}
+
+#seekr{
+    background: #19B5FE;
+}
+
+p{
+    padding: 15px;
+/*    float: left;*/
+}
+
+
+
