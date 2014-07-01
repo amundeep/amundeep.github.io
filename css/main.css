@@ -2,20 +2,24 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../img/mountains.jpg');
+    background-image: url('../img/forest.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-attachment: fixed;
 }
 
 header{
-    position: absolute;
+    position: static;
     top: 0;
     width: 100%;
-    font-size: 8em;
+    height: 10%;
     font-family: 'Lato';
+    font-size: 5em;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
+}
+ul{
+    list-style-type: none;
 }
 
 .container{
@@ -43,8 +47,8 @@ button {
     border-color: rgba(58, 83, 155, .5);/*#162f39*/
     color: white;
     width: 150px;
-    height: 75px;
-    top: 200px;
+    height: 50px;
+    margin: 20px;
     font-size: 2em;
     font-family: 'Lato';
     margin-left: 15px;
