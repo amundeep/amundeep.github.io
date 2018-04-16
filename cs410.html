@@ -90,28 +90,13 @@
             <h1 style="color:white;">Lyric Searcher</h1>
             <br>
             <br>
-            
-            <!-- <ul class="list-inline">
-                <li class="list-inline-item" style="margin-bottom:25px">
-                    <a href="#about" class="btn-xl btn-primary">About Me</a>
-                </li>
-                <li class="list-inline-item" style="margin-bottom:25px">
-                    <a href="https://www.github.com/amundeep" class="btn-xl btn-danger">Portfolio</a>
-                </li>
-                 <li class="list-inline-item" style="margin:5px">
-                    <a href="music.html" class="btn btn-warning">My Music</a>
-                </li> 
-                <li class="list-inline-item" style="margin-bottom:25px">
-                    <a href="#contact" class="btn-xl btn-info">Contact</a>
-                </li>
-            </ul> -->
 
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search for...">
+                      <input type="text" class="form-control" placeholder="Search for..." id="userInput">
                       <span class="input-group-btn">
-                        <button class="btn btn-secondary" type="button">Go!</button>
+                        <button class="btn btn-secondary" type="button" onclick="lookup()">Go!</button>
                       </span>
                     </div>
                 </div>
@@ -424,6 +409,23 @@
         }
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
+    </script>
+
+    <!-- Button Event/API Event Javascript -->
+    <script>
+    function lookup()
+    {
+        var input = document.getElementById("userInput").value;
+        alert(input + "\n" + httpGet("https://api.musixmatch.com/ws/1.1/track.lyrics.get?format=jsonp&callback=callback&track_id=" + input  + "&apikey=a225dce152c3e5a1f5764a7a37e5e52e"));
+    }
+
+    function httpGet(theUrl)
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", theUrl, false); // false for synchronous request
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
     </script>
 
 </body>
