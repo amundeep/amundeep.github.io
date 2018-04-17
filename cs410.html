@@ -292,7 +292,7 @@
         //alert("Raw Input: " + input + "\n" + get_response);
 
         var client = new HttpClient();
-        client.setRequestHeader('Access-Control-Allow-Headers', '*');
+        //client.setRequestHeader('Access-Control-Allow-Headers', '*');
         client.get('https://api.musixmatch.com/ws/1.1/track.search?format=json&callback=callback&q_track=" + input + "&f_has_lyrics=1&s_track_rating=desc&quorum_factor=1&apikey=a225dce152c3e5a1f5764a7a37e5e52e', function(response) {
             alert("Raw Input: " + input + "\n" + response);
             console.log(response);
@@ -315,7 +315,8 @@
                     aCallback(anHttpRequest.responseText);
             }
 
-            anHttpRequest.open( "GET", aUrl, true );            
+            anHttpRequest.open( "GET", aUrl, true ); 
+            anHttpRequest.setRequestHeader('Access-Control-Allow-Headers', '*');
             anHttpRequest.send( null );
         }
     }
