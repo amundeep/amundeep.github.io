@@ -285,17 +285,50 @@
     <script>
     function lookup()
     {
-        var input = document.getElementById("userInput").value;
-        alert(input + "\n" + httpGet("https://api.musixmatch.com/ws/1.1/track.lyrics.get?format=jsonp&callback=callback&track_id=" + input  + "&apikey=a225dce152c3e5a1f5764a7a37e5e52e"));
+        var input = document.getElementById("userInput").value; //get user input from search bar
+        input = encodeURIComponent(input.trim()); //encode the search input into url format
+        //var get_response = httpGet("https://api.musixmatch.com/ws/1.1/track.search?format=json&callback=callback&q_track=" + input + "&f_has_lyrics=1&s_track_rating=desc&quorum_factor=1&apikey=a225dce152c3e5a1f5764a7a37e5e52e");
+        //get_response = JSON.parse(get_response)
+        //alert("Raw Input: " + input + "\n" + get_response);
+
+        var client = new HttpClient();
+        client.get('https://api.musixmatch.com/ws/1.1/track.search?format=json&callback=callback&q_track=" + input + "&f_has_lyrics=1&s_track_rating=desc&quorum_factor=1&apikey=a225dce152c3e5a1f5764a7a37e5e52e', function(response) {
+            alert("Raw Input: " + input + "\n" + response);
+            console.log(response);
+        });
     }
 
-    function httpGet(theUrl)
-    {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", theUrl, false); // false for synchronous request
-        xmlHttp.send( null );
-        return xmlHttp.responseText;
+    // function httpGet(theUrl)
+    // {
+    //     var xmlHttp = new XMLHttpRequest();
+    //     xmlHttp.open("GET", theUrl, false); // false for synchronous request
+    //     xmlHttp.send( null );
+    //     return xmlHttp.responseText;
+    // }
+
+    var HttpClient = function() {
+        this.get = function(aUrl, aCallback) {
+            var anHttpRequest = new XMLHttpRequest();
+            anHttpRequest.onreadystatechange = function() { 
+                if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                    aCallback(anHttpRequest.responseText);
+            }
+
+            anHttpRequest.open( "GET", aUrl, true );            
+            anHttpRequest.send( null );
+        }
     }
+
+    // function httpGetAsync(theUrl, callback)
+    // {
+    //     var xmlHttp = new XMLHttpRequest();
+    //     xmlHttp.onreadystatechange = function() { 
+    //         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+    //             callback(xmlHttp.responseText);
+    //     }
+    //     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    //     xmlHttp.send(null);
+    // }
     </script>
 
 </body>
