@@ -87,14 +87,14 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1 style="color:white;">Lyric Searcher</h1>
+            <h1 style="color:white;">Topical Song Search</h1>
             <br>
             <br>
 
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search for..." id="userInput">
+                      <input type="text" class="form-control" placeholder="Search for a topic..." id="userInput">
                       <span class="input-group-btn">
                         <button class="btn btn-secondary" type="button" onclick="lookup()">Go!</button>
                       </span>
@@ -105,7 +105,7 @@
         </div>
     </header>
 
-    <!-- Search Results -->
+    <!-- Search Results 
     <section id="about" class="about">
         <div class="container">
             <div class="row">
@@ -115,14 +115,14 @@
                       I am a student studying computer engineering at UIUC who loves to drum, make music, and dance in my free time.
 
 
-                      <!-- <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> -->
+                     
                     </p>
                 </div>
             </div>
-            <!-- /.row -->
+
         </div>
-        <!-- /.container -->
     </section>
+    -->
 
     <!-- 
     <section id="services" class="services bg-primary">
@@ -318,6 +318,7 @@
             anHttpRequest.open( "GET", aUrl, true ); 
             anHttpRequest.setRequestHeader('Access-Control-Allow-Headers', '*');
             anHttpRequest.setRequestHeader('Access-Control-Allow-Origin', '*');
+        
             anHttpRequest.send( null );
         }
     }
