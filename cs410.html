@@ -285,6 +285,29 @@
     <script>
     function lookup()
     {
+
+        document.getElementById('output-topic.txt').onchange = function(){
+
+          var file = this.files[0];
+
+          var reader = new FileReader();
+          reader.onload = function(progressEvent){
+            // Entire file
+            console.log(this.result);
+
+            // By lines
+            var lines = this.result.split('\n');
+            for(var line = 0; line < lines.length; line++){
+              console.log(lines[line]);
+            }
+          };
+          reader.readAsText(file);
+        };
+
+
+
+
+        /*
         var input = document.getElementById("userInput").value; //get user input from search bar
         input = encodeURIComponent(input.trim()); //encode the search input into url format
         //var get_response = httpGet("https://api.musixmatch.com/ws/1.1/track.search?format=json&callback=callback&q_track=" + input + "&f_has_lyrics=1&s_track_rating=desc&quorum_factor=1&apikey=a225dce152c3e5a1f5764a7a37e5e52e");
@@ -296,7 +319,7 @@
         client.get('https://api.musixmatch.com/ws/1.1/track.search?format=json&callback=callback&q_track=" + input + "&f_has_lyrics=1&s_track_rating=desc&quorum_factor=1&apikey=a225dce152c3e5a1f5764a7a37e5e52e', function(response) {
             alert("Raw Input: " + input + "\n" + response);
             console.log(response);
-        });
+        });*/
     }
 
     // function httpGet(theUrl)
@@ -306,7 +329,7 @@
     //     xmlHttp.send( null );
     //     return xmlHttp.responseText;
     // }
-
+    /*
     var HttpClient = function() {
         this.get = function(aUrl, aCallback) {
             var anHttpRequest = new XMLHttpRequest();
@@ -321,7 +344,7 @@
         
             anHttpRequest.send( null );
         }
-    }
+    }*/
 
     </script>
 
