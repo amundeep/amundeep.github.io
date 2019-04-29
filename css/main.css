@@ -41,7 +41,25 @@ list-inline-item{
     margin:20px;
 }
 
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+	}
+
 /* Custom Button Styles */
+
+.form-padding {
+  margin-bottom: 20px;
+}
 
 .btn-xl {
     padding: 10px 15px;

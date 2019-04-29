@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/bttn.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -92,7 +93,7 @@
             <br>
             <!-- <h3>My Portfolio</h3> -->
 
-            <!-- social media buttons
+            <!-- social media buttons --
             <ul class="list-inline">
                 <li class="list-inline-item">
                     <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-facebook-square fa-fw fa-3x"></i></a>
@@ -114,21 +115,34 @@
                     <a href="#"><i style="color:#FF3A00;" class="fa fa-soundcloud fa-fw fa-3x"></i></a>
                 </li>
             </ul> -->
-            <ul class="list-inline">
-                <li class="list-inline-item" style="margin-bottom:25px">
-                    <a href="#about" class="btn-xl btn-primary">About Me</a>
-                </li>
-                <li class="list-inline-item" style="margin-bottom:25px">
-                    <a href="https://www.github.com/amundeep" class="btn-xl btn-danger">Portfolio</a>
-                </li>
-                <!-- <li class="list-inline-item" style="margin:5px">
-                    <a href="music.html" class="btn btn-warning">My Music</a>
-                </li> -->
-                <li class="list-inline-item" style="margin-bottom:25px">
-                    <a href="#contact" class="btn-xl btn-info">Contact</a>
-                </li>
-            </ul>
-
+            <div id="table">
+              <ul id="horizontal-list">
+                  <form class="form-padding">
+                      <li class="list-inline-item" style="margin-bottom:25px">
+                        <a href="#about">
+                          <button class="bttn-slant bttn-lg bttn-danger">
+                                  About Me
+                          </button>
+                        </a>
+                      </li>
+                  </form>
+                  <form class="form-padding">
+                      <li class="list-inline-item" style="margin-bottom:25px">
+                          <button formaction="https://www.github.com/amundeep" class="bttn-slant bttn-lg bttn-primary">Portfolio</button>
+                      </li>
+                  </form>
+                  <form class="form-padding">
+                      <li class="list-inline-item" style="margin-bottom:25px">
+                          <button formaction="https://soundcloud.com/amundeep-singh" class="bttn-slant bttn-lg bttn-success">Music</button>
+                      </li>
+                  </form>
+                  <form class="form-padding">
+                      <li class="list-inline-item" style="margin-bottom:25px">
+                          <button formaction="#contact" class="bttn-slant bttn-lg bttn-warning">Contact</button>
+                      </li>
+                  </form>
+              </ul>
+            </div>
         </div>
     </header>
 
