@@ -18,6 +18,10 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/bttn.css" rel="stylesheet">
 
+    <!-- Slick Image Carousel -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> <!-- Default styling -->
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -87,63 +91,65 @@
 
     <!-- Header -->
     <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1 style="color:white;">Amundeep Singh</h1>
-            <br>
-            <br>
-            <!-- <h3>My Portfolio</h3> -->
+        <!-- <div> -->
+            <div class="text-vertical-center">
+                <h1 style="color:white;">Amundeep Singh</h1>
+                <br>
+                <br>
+                <!-- <h3>My Portfolio</h3> -->
 
-            <!-- social media buttons --
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-facebook-square fa-fw fa-3x"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-twitter-square fa-fw fa-3x"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-linkedin-square fa-fw fa-3x"></i></a>
-                </li>
+                <!-- social media buttons --
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-facebook-square fa-fw fa-3x"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-twitter-square fa-fw fa-3x"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-linkedin-square fa-fw fa-3x"></i></a>
+                    </li>
 
-                <li>
-                    <a href="#"><i style="color:rgba(255,255,255,0.7);" class="fa fa-instagram fa-fw fa-3x"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i style="color:#070709;" class="fa fa-github fa-fw fa-3x"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i style="color:#FF3A00;" class="fa fa-soundcloud fa-fw fa-3x"></i></a>
-                </li>
-            </ul> -->
-            <div id="table">
-              <ul id="horizontal-list">
-                  <form class="form-padding">
-                      <li class="list-inline-item" style="margin-bottom:25px">
-                        <a href="#about">
-                          <button class="bttn-slant bttn-lg bttn-danger">
-                                  About Me
-                          </button>
-                        </a>
-                      </li>
-                  </form>
-                  <form class="form-padding">
-                      <li class="list-inline-item" style="margin-bottom:25px">
-                          <button formaction="https://www.github.com/amundeep" class="bttn-slant bttn-lg bttn-primary">Portfolio</button>
-                      </li>
-                  </form>
-                  <form class="form-padding">
-                      <li class="list-inline-item" style="margin-bottom:25px">
-                          <button formaction="https://soundcloud.com/amundeep-singh" class="bttn-slant bttn-lg bttn-success">Music</button>
-                      </li>
-                  </form>
-                  <form class="form-padding">
-                      <li class="list-inline-item" style="margin-bottom:25px">
-                          <button formaction="#contact" class="bttn-slant bttn-lg bttn-warning">Contact</button>
-                      </li>
-                  </form>
-              </ul>
+                    <li>
+                        <a href="#"><i style="color:rgba(255,255,255,0.7);" class="fa fa-instagram fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i style="color:#070709;" class="fa fa-github fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i style="color:#FF3A00;" class="fa fa-soundcloud fa-fw fa-3x"></i></a>
+                    </li>
+                </ul> -->
+                <div id="table">
+                <ul id="horizontal-list">
+                    <form class="form-padding">
+                        <li class="list-inline-item" style="margin-bottom:25px">
+                            <a href="#about">
+                            <button class="bttn-slant bttn-lg bttn-danger">
+                                    About Me
+                            </button>
+                            </a>
+                        </li>
+                    </form>
+                    <form class="form-padding">
+                        <li class="list-inline-item" style="margin-bottom:25px">
+                            <button formaction="https://www.github.com/amundeep" class="bttn-slant bttn-lg bttn-primary">Portfolio</button>
+                        </li>
+                    </form>
+                    <form class="form-padding">
+                        <li class="list-inline-item" style="margin-bottom:25px">
+                            <button formaction="https://soundcloud.com/amundeep-singh" class="bttn-slant bttn-lg bttn-success">Music</button>
+                        </li>
+                    </form>
+                    <form class="form-padding">
+                        <li class="list-inline-item" style="margin-bottom:25px">
+                            <button formaction="#contact" class="bttn-slant bttn-lg bttn-warning">Contact</button>
+                        </li>
+                    </form>
+                </ul>
+                </div>
             </div>
-        </div>
+        <!-- </div> -->
     </header>
 
     <!-- About -->
@@ -301,31 +307,6 @@
     </section>
 -->
 
-    <!-- Call to Action
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-                </div>
-            </div>
-        </div>
-    </aside>
-    -->
-
-    <!-- Map
-    <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-        </iframe>
-    </section>
-    -->
-
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -373,22 +354,43 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
+
+    // Carousel Image Script
+    $(document).ready(function() {
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+            // ,
+            // slidesToShow: 3,
+            // autoplay: true,
+            // autoplaySpeed: 2000
+        });
+    });
+
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
+
     // Opens the sidebar menu
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
+
     // Scrolls to the selected menu item on the page
     $(function() {
         $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
@@ -404,6 +406,7 @@
             }
         });
     });
+
     //#to-top button appears after scrolling
     var fixed = false;
     $(document).scroll(function() {
@@ -429,26 +432,6 @@
             }
         }
     });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-            var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
-        }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
     </script>
 
 </body>
