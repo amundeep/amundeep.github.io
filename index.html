@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -39,66 +39,24 @@
     </style>
 
     <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="img/favicon.ico">
-	  <link rel="icon" type="image/png" sizes="196x196" href="img/favicon-192.png">
-	  <link rel="icon" type="image/png" sizes="160x160" href="img/favicon-160.png">
-	  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96.png">
-	  <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
-	  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-	  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
-	  <link rel="apple-touch-icon" href="img/favicon-57.png">
-	  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon-114.png">
-	  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon-72.png">
-	  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon-144.png">
-	  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon-60.png">
-	  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon-120.png">
-	  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon-76.png">
-	  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon-152.png">
-	  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
-	  <meta name="msapplication-TileColor" content="#FFFFFF">
-	  <meta name="msapplication-TileImage" content="img/favicon-144.png">
-    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-left toggle"><i class="fa fa-times"></i></a> <!-- changed pull-right to pull-left -->
-            <li class="sidebar-brand">
-                <a href="index.html" onclick=$("#menu-close").click(); style="text-align: right; padding-right: 20px;">Contents</a>
-            </li>
-            <li>
-                <a href="index.html" onclick=$("#menu-close").click(); style="text-align: right; padding-right: 20px;">Home</a>
-            </li>
-            <li>
-                <a href="index.html#about" onclick=$("#menu-close").click(); style="text-align: right; padding-right: 20px;">About Me</a>
-            </li>
-            <li>
-                <a href="https://www.github.com/amundeep" onclick=$("#menu-close").click(); style="text-align: right; padding-right: 20px;">Portfolio</a>
-            </li>
-            <!-- <li>
-                <a href="music.html" onclick=$("#menu-close").click(); style="text-align: right; padding-right: 20px;">My Music</a>
-            </li> -->
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click(); style="text-align: right; padding-right: 20px;">Contact</a>
-            </li>
-        </ul>
-    </nav>
-
     <!-- Header -->
-    <header id="top" class="header">
+    <header id="top" class="header center">
         <!-- <div> -->
-            <div class="text-vertical-center">
-                <h1 style="color:white;">Amundeep Singh</h1>
-                <br>
-                <br>
-                <!-- <h3>My Portfolio</h3> -->
+            <div class="text-vertical-top">
 
-                <!-- social media buttons --
+                <h1 style="color:black;vertical-align: middle;">Site Under Construction</h1>
+                <body>Check back later :)</body>
+
+                <!-- social media buttons
                 <ul class="list-inline">
                     <li class="list-inline-item">
                         <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-facebook-square fa-fw fa-3x"></i></a>
@@ -120,195 +78,40 @@
                         <a href="#"><i style="color:#FF3A00;" class="fa fa-soundcloud fa-fw fa-3x"></i></a>
                     </li>
                 </ul> -->
-                <div id="table">
-                <ul id="horizontal-list">
-                    <form class="form-padding">
+
+                <!-- MAIN BUTTONS -->
+
+                <!-- <div class="table">
+                    <ul id="horizontal-list">
                         <li class="list-inline-item" style="margin-bottom:25px">
                             <a href="#about">
-                            <button class="bttn-slant bttn-lg bttn-danger">
-                                    About Me
-                            </button>
+                                <button class="bttn-stretch bttn-md">
+                                    About
+                                </button>
                             </a>
                         </li>
-                    </form>
-                    <form class="form-padding">
                         <li class="list-inline-item" style="margin-bottom:25px">
-                            <button formaction="https://www.github.com/amundeep" class="bttn-slant bttn-lg bttn-primary">Portfolio</button>
+                            <a href="https://soundcloud.com/amundeep-singh">
+                                <button class="bttn-stretch bttn-md">
+                                    Music
+                                </button>
+                            </a>
                         </li>
-                    </form>
-                    <form class="form-padding">
                         <li class="list-inline-item" style="margin-bottom:25px">
-                            <button formaction="https://soundcloud.com/amundeep-singh" class="bttn-slant bttn-lg bttn-success">Music</button>
+                            <a href="#contact">
+                                <button class="bttn-stretch bttn-md">
+                                    Contact
+                                </button>
+                            </a>
                         </li>
-                    </form>
-                    <form class="form-padding">
-                        <li class="list-inline-item" style="margin-bottom:25px">
-                            <button formaction="#contact" class="bttn-slant bttn-lg bttn-warning">Contact</button>
-                        </li>
-                    </form>
-                </ul>
-                </div>
+                    </ul>
+                </div> -->
             </div>
         <!-- </div> -->
     </header>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1>Who Am I?</h1>
-                    <p class="lead">
-                      I am a student studying computer engineering at UIUC who loves to drum, make music, and dance in my free time.
-
-
-                      <!-- <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> -->
-                    </p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Activities -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h1>Activities &amp; Extracurriculars</h1>
-                    <br>
-                    <!-- <hr class="small"> This places a horizontal line -->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <img src="img/circle-bd.png" alt="The Blue Devils" style="width:50%; height:50%;" border="0">
-                                <!-- <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i> CLOUD ICON
-                                </span> -->
-                                <br>
-                                <h4>
-                                    <strong>The Blue Devils</strong>
-                                </h4>
-                                <p>Tenor drummer for the Blue Devils Drum &amp; Bugle Corps</p>
-                                <br>
-                                <a href="https://bluedevils.org" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <!-- <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                              </span> -->
-                                <img src="img/circle-bhangra.png" alt="I-Bhangra" style="width:50%; height:50%;" border="0">
-                                <br>
-                                <h4>
-                                    <strong>Illini Bhangra</strong>
-                                </h4>
-                                <p>Dancer for UIUC's premier and competitive Bhangra team</p>
-                                <br>
-                                <a href="https://www.facebook.com/IBhangra/" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <!-- <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                              </span> -->
-                                <img src="img/circle-piano.png" alt="Keyboard" style="width:50%; height:50%;" border="0">
-                                <br>
-                                <h4>
-                                    <strong>Music Production</strong>
-                                </h4>
-                                <p>Avid producer of electronic music using Logic Pro X</p>
-                                <br>
-                                <a href="https://soundcloud.com/amundeep-singh" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <!-- <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                              </span> -->
-                                <img src="img/circle-computer.png" alt="Computer" style="width:50%; height:50%;" border="0">
-                                <br>
-                                <h4>
-                                    <strong>Developer</strong>
-                                </h4>
-                                <p>Eager self-taught developer for multiple platforms</p>
-                                <br>
-                                <a href="https://github.com/amundeep" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-
-        </div>
-    </aside>
-
-    <!-- Portfolio
-    <section id="portfolio" class="portfolio bg-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="portfolio.html">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.png">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="portfolio.html">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-shutter.png">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="portfolio.html">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-airjam.png">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="portfolio.html">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-downtime.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="portfolio.html" class="btn btn-dark">View More Items</a>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
--->
-
     <!-- Footer -->
-    <footer id="contact">
+    <!-- <footer id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -316,11 +119,9 @@
                     <br>
                     <h4><strong>Amundeep Singh</strong>
                     </h4>
-                    <p>3462 Geneva Drive
-                        <br>Santa Clara, CA 95051</p>
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (408) 637-6228</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:amundeep@gmail.com">amundeep@gmail.com</a>
+                        <li>
+                            <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:amundeep@gmail.com">amundeep@gmail.com</a>
                         </li>
                     </ul>
                     <br>
@@ -350,7 +151,7 @@
             </div>
         </div>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
+    </footer> -->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -377,18 +178,6 @@
             // autoplay: true,
             // autoplaySpeed: 2000
         });
-    });
-
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
     });
 
     // Scrolls to the selected menu item on the page
