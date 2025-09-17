@@ -11,13 +11,95 @@
 html,
 body {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding-top: 78px; /* space for fixed navbar (mobile) */
+}
+
+/* Navbar sizing and brand logo spacing */
+.navbar { min-height: 78px; }
+.navbar-brand {
+  height: 78px;
+  padding: 10px 15px; /* tighter padding so logo appears larger */
+  display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+}
+.navbar-brand .brand-logo { height: 100%; width: auto; display: block; vertical-align: middle; }
+.navbar-brand .brand-text { display: none; }
+@media (min-width: 768px) {
+  .navbar { min-height: 88px; }
+  .navbar-brand { height: 88px; padding-top: 12px; padding-bottom: 12px; }
+}
+
+/* Navbar link hover underline animation */
+.navbar-default .navbar-nav > li > a {
+  position: relative;
+  color: #000; /* default: black */
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  padding-top: 28px;   /* match 78px navbar height */
+  padding-bottom: 28px;
+}
+.navbar-default .navbar-nav > li > a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* sit at base of navbar */
+  height: 2px; /* thin rectangle */
+  background: #999; /* match hover/active text */
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 220ms ease;
+  transition: transform 220ms ease;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #999; /* hover: lighter grey */
+}
+.navbar-default .navbar-nav > li > a:hover:after,
+.navbar-default .navbar-nav > li > a:focus:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #999; /* active: lighter grey */
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    padding-top: 34px;  /* match 88px navbar height */
+    padding-bottom: 34px;
+  }
+}
+
+/* Ensure underline sits flush at bottom in collapsed mobile menu */
+@media (max-width: 767px) {
+  .navbar-default .navbar-collapse.in .navbar-nav > li > a:after,
+  .navbar-default .navbar-collapse.collapsing .navbar-nav > li > a:after {
+    bottom: -1px; /* overlap navbar bottom border for a flush edge */
+  }
+  /* Remove extra borders that create a visual gap */
+  .navbar-default { border-bottom-width: 1px; }
+  .navbar-default .navbar-collapse { border-top: 0; box-shadow: none; }
 }
 
 
@@ -193,20 +275,49 @@ hr.small {
     margin: 0px 0px 0 0;
 }
 
-/* Header */
+/* Header / Hero */
 
 .header {
-    display: table;
     position: relative;
     width: 100%;
-    height: 100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) ) no-repeat center top scroll;
-    background-position: center;
+}
+
+.hero {
+    min-height: 100vh;
+    color: #fff;
+    background: url('../img/bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+
+.hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 140px 20px 80px; /* top accounts for navbar */
+}
+
+.hero-title {
+    font-family: "Amatic SC", cursive;
+    font-size: 72px;
+    line-height: 1.1;
+    margin: 0 0 10px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.hero-ctas .btn { margin: 6px 8px; }
+
+.hero-social { margin-top: 18px; }
+.hero-social a { color: rgba(255,255,255,0.9); }
+.hero-social a:hover { color: #fff; }
 
 .center{
     position: absolute;
@@ -215,11 +326,13 @@ hr.small {
     transform: translate(-50%, -50%);
 }
 
-/* About */
+/* Sections */
 
-.about {
-    padding: 50px 0;
-}
+.section { padding: 60px 0; }
+.section.alt { background: #fafafa; }
+
+/* About (legacy selector kept) */
+.about { padding: 50px 0; }
 
 /* Services */
 
@@ -314,4 +427,84 @@ footer {
   position: fixed;
   bottom: 0px;
   left: 0px; /* changed from right to left */
+}
+
+/* Responsive embeds: add 1x1 helper */
+.embed-responsive-1by1 {
+  padding-bottom: 100%;
+}
+
+/* Mobile tweaks */
+@media (max-width: 992px) {
+  .hero-title { font-size: 56px; }
+}
+@media (max-width: 768px) {
+  body { padding-top: 78px; }
+  .hero-inner { padding: 120px 16px 56px; }
+  .hero-title { font-size: 42px; }
+  .hero-subtitle { font-size: 16px; }
+  .section { padding: 40px 0; }
+  /* Center hamburger vertically in 78px navbar */
+  .navbar-toggle {
+    margin-top: 22px;   /* (78 - ~34 button height) / 2 */
+    margin-bottom: 22px;
+    padding: 10px; /* keep a good tap target */
+  }
+  /* Larger logo and centered on small screens */
+  .navbar-brand { padding-top: 10px; padding-bottom: 10px; }
+  .navbar-brand .brand-logo { height: 100%; }
+}
+
+/* Custom plus-to-X toggle icon */
+.navbar-toggle.custom-toggle { border: 0; background: transparent; box-shadow: none; border-radius: 0; }
+.navbar-default .navbar-toggle.custom-toggle:hover,
+.navbar-default .navbar-toggle.custom-toggle:focus {
+  background: transparent; /* only icon changes color */
+  outline: none;
+}
+.navbar-toggle.custom-toggle .toggle-icon {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  -webkit-transition: -webkit-transform 220ms ease;
+  transition: transform 220ms ease;
+}
+.navbar-toggle.custom-toggle .toggle-icon:before,
+.navbar-toggle.custom-toggle .toggle-icon:after {
+  content: "";
+  position: absolute;
+  background: #000; /* default link color */
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+}
+/* Horizontal bar */
+.navbar-toggle.custom-toggle .toggle-icon:before {
+  left: 0; right: 0; top: 50%; height: 2px; -webkit-transform: translateY(-50%); transform: translateY(-50%);
+}
+/* Vertical bar */
+.navbar-toggle.custom-toggle .toggle-icon:after {
+  top: 0; bottom: 0; left: 50%; width: 2px; -webkit-transform: translateX(-50%); transform: translateX(-50%);
+}
+/* Hover color to match nav hover */
+.navbar-toggle.custom-toggle:hover .toggle-icon:before,
+.navbar-toggle.custom-toggle:hover .toggle-icon:after,
+.navbar-toggle.custom-toggle:focus .toggle-icon:before,
+.navbar-toggle.custom-toggle:focus .toggle-icon:after {
+  background: #999;
+}
+/* Rotate to X when expanded (Bootstrap removes .collapsed) */
+.navbar-toggle.custom-toggle:not(.collapsed) .toggle-icon {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.navbar-toggle.custom-toggle:not(.collapsed) .toggle-icon:before,
+.navbar-toggle.custom-toggle:not(.collapsed) .toggle-icon:after {
+  background: #999; /* active color */
+}
+@media (min-width: 768px) {
+  body { padding-top: 88px; }
+}
+@media (max-width: 480px) {
+  .hero-title { font-size: 36px; }
 }

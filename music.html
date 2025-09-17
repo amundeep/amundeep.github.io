@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Music by Amundeep Singh">
+  <title>Music — Amundeep Singh</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background:rgba(255,255,255,0.95); border:0;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle custom-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-controls="main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo-black-no-bg-TIGHT.PNG" alt="Logo" class="brand-logo">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="music.html">Music</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1>Music</h1>
+          <p>Stream my latest releases.</p>
+          <hr class="small">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h4>Spotify</h4>
+          <div class="embed-responsive embed-responsive-1by1" style="border-radius:8px; overflow:hidden;">
+            <iframe class="embed-responsive-item" src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h4>SoundCloud</h4>
+          <div class="embed-responsive embed-responsive-1by1" style="border-radius:8px; overflow:hidden;">
+            <iframe class="embed-responsive-item" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/347150187&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="text-muted">&copy; <span id="year"></span> Amundeep Singh</p>
+    </div>
+  </footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    (function(){ var el=document.getElementById('year'); if(el) el.textContent=new Date().getFullYear(); })();
+  </script>
+</body>
+</html>

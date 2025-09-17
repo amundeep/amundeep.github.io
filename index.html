@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Amundeep Singh</title>
+    <title>Amundeep Singh — Official Site</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,10 +17,6 @@
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
     <link href="css/bttn.css" rel="stylesheet">
-
-    <!-- Slick Image Carousel -->
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> <!-- Default styling -->
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -48,67 +44,67 @@
 
 <body>
 
-    <!-- Header -->
-    <header id="top" class="header center">
-        <!-- <div> -->
-            <div class="text-vertical-top">
+    <!-- Simple Nav -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background:rgba(255,255,255,0.95); border:0;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle custom-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-controls="main-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="toggle-icon" aria-hidden="true"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo-black-no-bg-TIGHT.PNG" alt="Logo" class="brand-logo">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="merch.html">Merch</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-                <h1 style="color:black;vertical-align: middle;">Site Under Construction</h1>
-                <body>Check back later :)</body>
-
-                <!-- social media buttons
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-facebook-square fa-fw fa-3x"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-twitter-square fa-fw fa-3x"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#"><i style="color:rgba(255,255,255,0.9);" class="fa fa-linkedin-square fa-fw fa-3x"></i></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><i style="color:rgba(255,255,255,0.7);" class="fa fa-instagram fa-fw fa-3x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i style="color:#070709;" class="fa fa-github fa-fw fa-3x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i style="color:#FF3A00;" class="fa fa-soundcloud fa-fw fa-3x"></i></a>
-                    </li>
-                </ul> -->
-
-                <!-- MAIN BUTTONS -->
-
-                <!-- <div class="table">
-                    <ul id="horizontal-list">
-                        <li class="list-inline-item" style="margin-bottom:25px">
-                            <a href="#about">
-                                <button class="bttn-stretch bttn-md">
-                                    About
-                                </button>
-                            </a>
-                        </li>
-                        <li class="list-inline-item" style="margin-bottom:25px">
-                            <a href="https://soundcloud.com/amundeep-singh">
-                                <button class="bttn-stretch bttn-md">
-                                    Music
-                                </button>
-                            </a>
-                        </li>
-                        <li class="list-inline-item" style="margin-bottom:25px">
-                            <a href="#contact">
-                                <button class="bttn-stretch bttn-md">
-                                    Contact
-                                </button>
-                            </a>
-                        </li>
-                    </ul>
-                </div> -->
-            </div>
-        <!-- </div> -->
+    <!-- Hero Header -->
+    <header id="top" class="header hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">Amundeep Singh</h1>
+        <p class="hero-subtitle">Producer • Musician • Creator</p>
+        <div class="hero-ctas">
+          <a href="music.html" class="btn btn-dark btn-xl">Listen</a>
+          <a href="merch.html" class="btn btn-light btn-xl">Shop Merch</a>
+          <a href="contact.html" class="btn btn-dark btn-xl">Subscribe</a>
+        </div>
+        <ul class="list-inline hero-social">
+          <li class="list-inline-item"><a href="https://soundcloud.com/" target="_blank"><i class="fa fa-soundcloud fa-fw fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="https://instagram.com/" target="_blank"><i class="fa fa-instagram fa-fw fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="https://open.spotify.com/" target="_blank"><i class="fa fa-spotify fa-fw fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="https://youtube.com/" target="_blank"><i class="fa fa-youtube-play fa-fw fa-2x"></i></a></li>
+        </ul>
+      </div>
     </header>
+
+    <!-- Home callouts (optional) -->
+    <section class="section alt">
+      <div class="container text-center">
+        <h2>New music and limited merch drops</h2>
+        <p>Explore the latest releases and gear.</p>
+        <p>
+          <a href="music.html" class="btn btn-dark btn-xl">Listen Now</a>
+          <a href="merch.html" class="btn btn-light btn-xl">Shop Merch</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p class="text-muted">&copy; <span id="year"></span> Amundeep Singh</p>
+      </div>
+    </footer>
 
     <!-- Footer -->
     <!-- <footer id="contact">
@@ -153,11 +149,8 @@
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer> -->
 
-    <!-- jQuery -->
+    <!-- jQuery (local) -->
     <script src="js/jquery.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -165,20 +158,7 @@
     <!-- Custom Theme JavaScript -->
     <script>
 
-    // Carousel Image Script
-    $(document).ready(function() {
-        $('.carousel').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            fade: true,
-            cssEase: 'linear'
-            // ,
-            // slidesToShow: 3,
-            // autoplay: true,
-            // autoplaySpeed: 2000
-        });
-    });
+    // Slick removed
 
     // Scrolls to the selected menu item on the page
     $(function() {
@@ -221,6 +201,12 @@
             }
         }
     });
+
+    // Set footer year
+    (function(){
+      var el = document.getElementById('year');
+      if (el) el.textContent = new Date().getFullYear();
+    })();
     </script>
 
 </body>

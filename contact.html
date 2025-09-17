@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Amundeep Singh">
+  <title>Contact — Amundeep Singh</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background:rgba(255,255,255,0.95); border:0;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle custom-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-controls="main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo-black-no-bg-TIGHT.PNG" alt="Logo" class="brand-logo">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section alt">
+    <div class="container text-center">
+      <h1>Contact</h1>
+      <p>Subscribe for new drops, shows, and exclusive merch.</p>
+      <p>
+        <a href="mailto:subscribe@example.com" class="btn btn-dark btn-xl">Subscribe via Email</a>
+      </p>
+      <ul class="list-inline">
+        <li><a href="https://instagram.com/" target="_blank"><i class="fa fa-instagram fa-fw fa-2x"></i></a></li>
+        <li><a href="https://open.spotify.com/" target="_blank"><i class="fa fa-spotify fa-fw fa-2x"></i></a></li>
+        <li><a href="https://soundcloud.com/" target="_blank"><i class="fa fa-soundcloud fa-fw fa-2x"></i></a></li>
+        <li><a href="https://youtube.com/" target="_blank"><i class="fa fa-youtube-play fa-fw fa-2x"></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="text-muted">&copy; <span id="year"></span> Amundeep Singh</p>
+    </div>
+  </footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    (function(){ var el=document.getElementById('year'); if(el) el.textContent=new Date().getFullYear(); })();
+  </script>
+</body>
+</html>
